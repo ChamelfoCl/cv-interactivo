@@ -30,14 +30,72 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { cn } from "@/lib/utils"
+
+// Custom Badge component
+function Badge({ children, className }: { children: React.ReactNode; className?: string }) {
+  return (
+    <span className={cn("inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium", className)}>
+      {children}
+    </span>
+  )
+}
+
+// Custom Accordion component
+function AccordionItem({
+  title,
+  company,
+  period,
+  location,
+  achievements,
+  isOpen,
+  onToggle,
+  className,
+  style,
+}: {
+  title: string
+  company: string
+  period: string
+  location: string
+  achievements: string[]
+  isOpen: boolean
+  onToggle: () => void
+  className?: string
+  style?: React.CSSProperties
+}) {
+  return (
+    <div className={cn("bg-card border rounded-lg shadow-sm transition-all duration-500 hover:shadow-md", className)} style={style}>
+      <button
+        onClick={onToggle}
+        className="w-full px-6 py-4 flex items-center justify-between text-left"
+      >
+        <div className="flex flex-col md:flex-row md:items-center justify-between w-full gap-2">
+          <div>
+            <h3 className="font-semibold text-lg">{title}</h3>
+            <p className="text-muted-foreground text-sm">{company}</p>
+          </div>
+          <Badge className="bg-primary text-primary-foreground w-fit">{period}</Badge>
+        </div>
+        <ChevronDown className={cn("h-5 w-5 ml-4 transition-transform duration-200", isOpen && "rotate-180")} />
+      </button>
+      {isOpen && (
+        <div className="px-6 pb-4">
+          <p className="text-sm text-muted-foreground mb-3">
+            <strong>Ubicación:</strong> {location}
+          </p>
+          <ul className="space-y-2">
+            {achievements.map((achievement, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                <span>{achievement}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  )
+}
 
 // Data
 const experiences = [
@@ -146,6 +204,7 @@ export default function CVPage() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [showSuccess, setShowSuccess] = useState(false)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+  const [openExp, setOpenExp] = useState<string | null>(null)
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
   // Theme toggle
@@ -344,42 +403,24 @@ export default function CVPage() {
             Experiencia Profesional
           </h2>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <div className="space-y-4">
             {experiences.map((exp, index) => (
               <AccordionItem
                 key={exp.id}
-                value={exp.id}
+                title={exp.title}
+                company={exp.company}
+                period={exp.period}
+                location={exp.location}
+                achievements={exp.achievements}
+                isOpen={openExp === exp.id}
+                onToggle={() => setOpenExp(openExp === exp.id ? null : exp.id)}
                 className={cn(
-                  "bg-card border rounded-lg shadow-sm transition-all duration-500 hover:shadow-md",
                   visibleSections.has("experiencia") ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
                 )}
                 style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between w-full gap-2 text-left">
-                    <div>
-                      <h3 className="font-semibold text-lg">{exp.title}</h3>
-                      <p className="text-muted-foreground text-sm">{exp.company}</p>
-                    </div>
-                    <Badge className="bg-primary text-primary-foreground w-fit">{exp.period}</Badge>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4">
-                  <p className="text-sm text-muted-foreground mb-3">
-                    <strong>Ubicación:</strong> {exp.location}
-                  </p>
-                  <ul className="space-y-2">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
+              />
             ))}
-          </Accordion>
+          </div>
         </div>
       </section>
 
