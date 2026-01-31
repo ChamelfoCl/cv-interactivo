@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interactivo - Francisco Moraga | Contador Público</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">
+                <i class="fas fa-briefcase me-2"></i>Francisco Moraga
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="themeToggle" class="btn btn-outline-light btn-sm ms-2">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== SECCIÓN INICIO ===================== -->
+    <section id="inicio" class="hero-section py-5 gradient-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img src="https://via.placeholder.com/200/2563eb/ffffff?text=FM" alt="Francisco Moraga" class="rounded-circle img-fluid border-5 border-primary shadow-lg" width="200">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3 text-primary">
+                        Francisco Javier Moraga Cabezas
+                    </h1>
+                    <p class="lead mb-3">
+                        <span class="badge bg-primary me-2">Contador Público y Auditor</span>
+                        <span class="badge bg-success">IFRS Certificado (ICAEW)</span>
+                    </p>
+                    <p class="text-muted fs-5 mb-4">
+                        Especialista en implementación de normativas internacionales, gestión financiera corporativa y transformación digital con más de 25 años de experiencia en empresas líderes del mercado chileno.
+                    </p>
+                    <div class="contact-info mb-4">
+                        <a href="tel:+56956872559" class="btn btn-outline-primary btn-sm me-2">
+                            <i class="fas fa-phone"></i> +56 9 5687 2559
+                        </a>
+                        <a href="mailto:francisco.moraga@pm.me" class="btn btn-outline-primary btn-sm me-2">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://wa.me/56956872559" class="btn btn-outline-success btn-sm me-2" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://linkedin.com" class="btn btn-outline-info btn-sm" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <h3 class="text-primary fw-bold">25+</h3>
+                            <p class="text-muted small">Años Experiencia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="text-success fw-bold">13</h3>
+                            <p class="text-muted small">Sociedades Consolidadas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="text-info fw-bold">100%</h3>
+                            <p class="text-muted small">Cumplimiento Normativo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN EXPERIENCIA ===================== -->
+    <section id="experiencia" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-5">
+                <i class="fas fa-briefcase me-3 text-primary"></i>Experiencia Profesional
+            </h2>
+            
+            <div class="accordion" id="experienceAccordion">
+                <!-- Experiencia 1 -->
+                <div class="accordion-item experience-card">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp1">
+                            <div class="d-flex justify-content-between w-100">
+                                <div>
+                                    <h5 class="mb-0">Consultor Independiente</h5>
+                                    <p class="text-muted small mb-0">Asesoría Financiera Especializada</p>
+                                </div>
+                                <span class="badge bg-primary align-self-center">2024 - Presente</span>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Ubicación:</strong> Temuco</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Implementación de IFRS en 2 empresas con aprobación sin observaciones</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Reducción de 20% en tiempos de cierre mediante automatización</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Diseño de sistemas de reportería que mejoraron visibilidad de KPIs en 40%</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Capacitación de 30+ profesionales en IFRS y herramientas financieras</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="accordion-item experience-card">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2">
+                            <div class="d-flex justify-content-between w-100">
+                                <div>
+                                    <h5 class="mb-0">Gerente de Finanzas</h5>
+                                    <p class="text-muted small mb-0">SG 2000 S.A. (Sector Agrícola)</p>
+                                </div>
+                                <span class="badge bg-primary align-self-center">2022 - 2024</span>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Ubicación:</strong> Temuco</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Transición exitosa a IFRS en 8 meses con capacitación de equipo (5 personas)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Reducción de tiempo de cierre mensual de 15 a 7 días (53%)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Optimización de estructura de pasivos, reduciendo costo financiero 12%</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Forecast con precisión del 92% vs. resultados reales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="accordion-item experience-card">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp3">
+                            <div class="d-flex justify-content-between w-100">
+                                <div>
+                                    <h5 class="mb-0">Jefe de Contabilidad Corporativo</h5>
+                                    <p class="text-muted small mb-0">Esval S.A. (Servicios Sanitarios)</p>
+                                </div>
+                                <span class="badge bg-primary align-self-center">2016 - 2019</span>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="exp3" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Ubicación:</strong> Valparaíso</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Consolidación de 6 sociedades con cero observaciones CMF/SISS (3 años)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Auditorías sin salvedades (PwC) en 100% de períodos</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Reducción de tiempo de consolidación de 12 a 8 días (33%)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Optimización tributaria que redujo carga fiscal en 8% anual</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN EDUCACIÓN ===================== -->
+    <section id="educacion" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">
+                <i class="fas fa-graduation-cap me-3 text-primary"></i>Educación y Certificaciones
+            </h2>
+            
+            <div class="row g-4">
+                <!-- Educación 1 -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <i class="fas fa-certificate text-primary fa-2x mb-3"></i>
+                            <h5 class="mb-1">Certificado IFRS (ICAEW)</h5>
+                            <p class="text-muted small mb-2">2018</p>
+                        </div>
+                        <p class="text-muted small">
+                            Instituto de Contadores Públicos en Inglaterra y Gales | 78% aprobación
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Educación 2 -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <i class="fas fa-robot text-success fa-2x mb-3"></i>
+                            <h5 class="mb-1">Inteligencia Artificial Generativa</h5>
+                            <p class="text-muted small mb-2">2025</p>
+                        </div>
+                        <p class="text-muted small">
+                            Aplicaciones para automatización de procesos empresariales
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Educación 3 -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <i class="fas fa-book text-info fa-2x mb-3"></i>
+                            <h5 class="mb-1">Post-Título Contabilidad Internacional</h5>
+                            <p class="text-muted small mb-2">2008</p>
+                        </div>
+                        <p class="text-muted small">
+                            Universidad de Santiago de Chile | Diplomado NIIF/IFRS
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Educación 4 -->
+                <div class="col-md-6 col-lg-4 fade-in">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <i class="fas fa-scroll text-warning fa-2x mb-3"></i>
+                            <h5 class="mb-1">Contador Público y Auditor</h5>
+                            <p class="text-muted small mb-2">1995</p>
+                        </div>
+                        <p class="text-muted small">
+                            Universidad de Magallanes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN HABILIDADES ===================== -->
+    <section id="habilidades" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title mb-5">
+                <i class="fas fa-star me-3 text-primary"></i>Habilidades Técnicas
+            </h2>
+            
+            <div class="row g-4">
+                <!-- Habilidad 1 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-chart-line text-primary me-2"></i>IFRS / Contabilidad
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-primary" style="width: 95%"></div>
+                        </div>
+                        <p class="text-muted small">Experto Certificado (ICAEW)</p>
+                    </div>
+                </div>
+
+                <!-- Habilidad 2 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-database text-success me-2"></i>SAP FI-CO
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style="width: 90%"></div>
+                        </div>
+                        <p class="text-muted small">Avanzado + Implementación</p>
+                    </div>
+                </div>
+
+                <!-- Habilidad 3 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-chart-bar text-info me-2"></i>Power BI
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info" style="width: 88%"></div>
+                        </div>
+                        <p class="text-muted small">Dashboards Avanzados</p>
+                    </div>
+                </div>
+
+                <!-- Habilidad 4 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-file-excel text-warning me-2"></i>Excel
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-warning" style="width: 98%"></div>
+                        </div>
+                        <p class="text-muted small">Experto (Macros, Power Query)</p>
+                    </div>
+                </div>
+
+                <!-- Habilidad 5 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-users text-danger me-2"></i>Liderazgo
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-danger" style="width: 92%"></div>
+                        </div>
+                        <p class="text-muted small">Hasta 8 personas</p>
+                    </div>
+                </div>
+
+                <!-- Habilidad 6 -->
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="skill-card">
+                        <h5 class="mb-3">
+                            <i class="fas fa-code text-secondary me-2"></i>Git/GitHub
+                        </h5>
+                        <div class="progress mb-2" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-secondary" style="width: 75%"></div>
+                        </div>
+                        <p class="text-muted small">Control de Versiones</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competencias adicionales -->
+            <div class="mt-5 pt-4 border-top">
+                <h5 class="mb-4">Áreas de Expertise</h5>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Implementación IFRS
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Estados Financieros
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Auditorías Externas
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Cumplimiento CMF/SISS
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Transformación Digital
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Implementación SAP
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Automatización Procesos
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Reportería Ejecutiva
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle text-success me-2"></i> Planificación Tributaria
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN CONTACTO ===================== -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">
+                <i class="fas fa-envelope me-3 text-primary"></i>Ponte en Contacto
+            </h2>
+            
+            <div class="row g-5">
+                <!-- Información de contacto -->
+                <div class="col-lg-5">
+                    <div class="contact-info-section">
+                        <h5 class="mb-4">Información de Contacto</h5>
+                        
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-map-marker-alt text-primary fa-lg me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Dirección</h6>
+                                <p class="text-muted">Av. Las Encinas 02786, Barrio Inglés<br>Temuco, Araucanía, Chile</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-phone text-success fa-lg me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Teléfono</h6>
+                                <a href="tel:+56956872559" class="text-decoration-none">+56 9 5687 2559</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-envelope text-danger fa-lg me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Email</h6>
+                                <a href="mailto:francisco.moraga@pm.me" class="text-decoration-none">francisco.moraga@pm.me</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin text-info fa-lg me-3"></i>
+                            <div>
+                                <h6 class="mb-1">LinkedIn</h6>
+                                <a href="https://linkedin.com" target="_blank" class="text-decoration-none">Mi Perfil LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="col-lg-7">
+                    <form id="contactForm" class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                            <small class="text-danger d-none" id="nameError">Por favor ingresa tu nombre</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <small class="text-danger d-none" id="emailError">Por favor ingresa un correo válido</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Asunto *</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                            <small class="text-danger d-none" id="subjectError">Por favor ingresa un asunto</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <small class="text-danger d-none" id="messageError">Por favor ingresa un mensaje</small>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-times me-2"></i>Limpiar
+                            </button>
+                        </div>
+
+                        <div id="successMessage" class="alert alert-success d-none mt-3" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>¡Mensaje enviado correctamente! Te contactaremos pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-dark text-light py-4 text-center mt-5">
+        <div class="container">
+            <p class="mb-2">
+                <i class="fas fa-copyright me-2"></i>2026 Francisco Javier Moraga Cabezas - CV Interactivo
+            </p>
+            <p class="text-muted small">
+                Desarrollado con <i class="fas fa-heart text-danger"></i> | 
+                HTML5 • CSS3 • Bootstrap 5 • JavaScript • jQuery
+            </p>
+            <div class="social-links mt-3">
+                <a href="tel:+56956872559" class="btn btn-outline-light btn-sm me-2">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="mailto:francisco.moraga@pm.me" class="btn btn-outline-light btn-sm me-2">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/56956872559" class="btn btn-outline-light btn-sm me-2" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://linkedin.com" class="btn btn-outline-light btn-sm" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
